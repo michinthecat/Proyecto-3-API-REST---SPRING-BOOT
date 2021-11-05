@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "43b25077-2f74-48a2-a132-1978cc717d16",
+		"name": "lyjstore-api-nice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "guardarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"mac book pro\",\r\n    \"precioVenta\": 800,\r\n    \"upc\": 5464\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/guardarProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"guardarProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/listarProductos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"listarProductos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/buscarPorId/980",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"buscarPorId",
+						"980"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarProductoPorId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/eliminarProductoPorId/982",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"eliminarProductoPorId",
+						"982"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/actualizarProducto/981/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"actualizarProducto",
+						"981",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarProductoPorNombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/listarProductos/rest Nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"listarProductos",
+						"rest Nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardarProductosPedidos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productosPedidosPK\":{\r\n        \"idProducto\": 4,\r\n        \"idPedido\": 1    \r\n    },\r\n    \"cantidad\": 1,\r\n    \"precio\": 300,\r\n    \"fecha\":\"2021-11-09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos-pedidos/guardarProductoPedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos-pedidos",
+						"guardarProductoPedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarProductosPedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos-pedidos/listarProductosPedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos-pedidos",
+						"listarProductosPedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarProductospEDIDOS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos-pedidos/eliminarProductosPedidos/3/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos-pedidos",
+						"eliminarProductosPedidos",
+						"3",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarDetalle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos-pedidos/buscarProductosPedidosPorID/4/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos-pedidos",
+						"buscarProductosPedidosPorID",
+						"4",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarDetalle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos-pedidos/actualizarProductosPedidosPorID/4/1/999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos-pedidos",
+						"actualizarProductosPedidosPorID",
+						"4",
+						"1",
+						"999"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
