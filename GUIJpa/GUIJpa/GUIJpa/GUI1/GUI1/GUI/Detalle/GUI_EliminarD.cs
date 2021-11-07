@@ -54,12 +54,23 @@ namespace GUI1.GUI.Detalle
 
 
             String uri = "http://localhost:8080/productos-pedidos/buscarProductosPedidosPorID/" + idProducto + "/" + idPedido;
-            respuesta = webClient.DownloadString(uri);
-            productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
 
-            textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
-            textBoxPrecio.Text = productosPedidos.Precio.ToString();
-            textBoxFecha.Text = productosPedidos.Fecha.ToString();
+            try
+            {
+                respuesta = webClient.DownloadString(uri);
+                productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
+
+                textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
+                textBoxPrecio.Text = productosPedidos.Precio.ToString();
+                textBoxFecha.Text = productosPedidos.Fecha.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("verifique la integridad de la info", "Error");
+
+            }
+
+
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

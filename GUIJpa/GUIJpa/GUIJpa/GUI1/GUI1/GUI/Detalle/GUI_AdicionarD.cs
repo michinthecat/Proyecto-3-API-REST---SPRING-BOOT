@@ -78,13 +78,20 @@ namespace GUI1.GUI.Detalle
 
             idProducto = textBoxIDPro.Text;
             String uri = "http://localhost:8080/productos/buscarPorId/" + idProducto;
-            respuesta = webClient.DownloadString(uri);
-            producto = JsonConvert.DeserializeObject<Producto>(respuesta);
+            try
+            {
+                respuesta = webClient.DownloadString(uri);
+                producto = JsonConvert.DeserializeObject<Producto>(respuesta);
 
-            textBoxNombre.Text = producto.Nombre;
-            textBoxUPC.Text = producto.Upc.ToString();
+                textBoxNombre.Text = producto.Nombre;
+                textBoxUPC.Text = producto.Upc.ToString();
 
 
+            }
+            catch (Exception ex){
+                MessageBox.Show("verifique la integridad de la info","Error");
+            }
+           
 
 
             textBoxIDPro.ReadOnly = true;

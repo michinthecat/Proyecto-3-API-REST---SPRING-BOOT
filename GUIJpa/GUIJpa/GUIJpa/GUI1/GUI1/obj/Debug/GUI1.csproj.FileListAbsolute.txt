@@ -108,3 +108,4 @@ C:\Users\jhone\OneDrive\Escritorio\Taller 3\GUIJpa\GUIJpa\GUIJpa\GUI1\GUI1\obj\D
 C:\Users\jhone\OneDrive\Escritorio\Taller 3\GUIJpa\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.csproj.CopyComplete
 C:\Users\jhone\OneDrive\Escritorio\Taller 3\GUIJpa\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.exe
 C:\Users\jhone\OneDrive\Escritorio\Taller 3\GUIJpa\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.pdb
+C:\Users\jhone\OneDrive\Escritorio\Taller 3\GUIJpa\GUIJpa\GUIJpa\GUI1\GUI1\obj\Debug\GUI1.csproj.AssemblyReference.cache

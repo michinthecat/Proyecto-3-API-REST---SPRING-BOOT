@@ -46,18 +46,19 @@ namespace GUI1.GUI.Productos
 
             idProducto = textBoxID.Text;
             String uri = "http://localhost:8080/productos/buscarPorId/" + idProducto;
-            respuesta = webClient.DownloadString(uri);
-            producto = JsonConvert.DeserializeObject<Producto>(respuesta);
-
-            if (producto == null)
+            try
             {
-                MessageBox.Show("Error");
-            }
-            else
-            {
+                respuesta = webClient.DownloadString(uri);
+                producto = JsonConvert.DeserializeObject<Producto>(respuesta);
                 textBoxNombre.Text = producto.Nombre;
-
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se encontro el productico","Error");
+            }
+           
+
+            
 
 
 

@@ -45,11 +45,19 @@ namespace GUI1.GUI.Detalle
 
 
             String uri = "http://localhost:8080/productos-pedidos/buscarProductosPedidosPorID/" + idProducto + "/" + idPedido;
-            respuesta = webClient.DownloadString(uri);
-            productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
+            try
+            {
+                respuesta = webClient.DownloadString(uri);
+                productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
 
-            textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
-            textBoxPrecio.Text = productosPedidos.Precio.ToString();
+                textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
+                textBoxPrecio.Text = productosPedidos.Precio.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("verifique la integridad de la info", "Error");
+            }
+            
 
 
 

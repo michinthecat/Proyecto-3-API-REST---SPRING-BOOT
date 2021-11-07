@@ -50,12 +50,21 @@ namespace GUI1.GUI.Productos
 
             idProducto = textBoxID.Text;
             String uri = "http://localhost:8080/productos/buscarPorId/" + idProducto;
-            respuesta = webClient.DownloadString(uri);
-            producto = JsonConvert.DeserializeObject<Producto>(respuesta);
+            
+            try
+            {
+                respuesta = webClient.DownloadString(uri);
+                producto = JsonConvert.DeserializeObject<Producto>(respuesta);
 
-            textBoxNombre.Text = producto.Nombre;
-            textBoxPrecio.Text = producto.PrecioVenta.ToString();
-            textBoxUPC.Text = producto.Upc.ToString();
+                textBoxNombre.Text = producto.Nombre;
+                textBoxPrecio.Text = producto.PrecioVenta.ToString();
+                textBoxUPC.Text = producto.Upc.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("verifique la integridad de la info", "Error");
+            }
+           
 
             textBoxID.ReadOnly = true;
             labelEdit.Text = "Indica El Nuevo Precio";
@@ -104,7 +113,7 @@ namespace GUI1.GUI.Productos
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error","verifique la interidad de la info");
             }
 
         }

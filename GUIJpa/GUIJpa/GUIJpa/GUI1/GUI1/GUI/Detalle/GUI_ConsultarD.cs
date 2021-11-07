@@ -35,15 +35,22 @@ namespace GUI1.GUI.Detalle
             idProducto = textBoxIDPro.Text;
             idPedido = textBoxIDPedido.Text;
 
+            try
+            {
+                String uri = "http://localhost:8080/productos-pedidos/buscarProductosPedidosPorID/" + idProducto + "/" + idPedido;
+                respuesta = webClient.DownloadString(uri);
+                productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
 
-            String uri = "http://localhost:8080/productos-pedidos/buscarProductosPedidosPorID/" + idProducto + "/" + idPedido;
-            respuesta = webClient.DownloadString(uri);
-            productosPedidos = JsonConvert.DeserializeObject<ProductosPedidos>(respuesta);
+                textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
+                textBoxPrecio.Text = productosPedidos.Precio.ToString();
+                textBoxFecha.Text = productosPedidos.Fecha.ToString();
 
-            textBoxCantidad.Text = productosPedidos.Cantidad.ToString();
-            textBoxPrecio.Text = productosPedidos.Precio.ToString();
-            textBoxFecha.Text = productosPedidos.Fecha.ToString();
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", "verificar la integridad de la info");
+            }
+            
 
 
         }
