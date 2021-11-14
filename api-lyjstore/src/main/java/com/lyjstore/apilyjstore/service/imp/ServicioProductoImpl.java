@@ -3,11 +3,15 @@ package com.lyjstore.apilyjstore.service.imp;
 import com.lyjstore.apilyjstore.model.Producto;
 import com.lyjstore.apilyjstore.repository.ProductoRepository;
 import com.lyjstore.apilyjstore.service.ServicioProducto;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Data
 @Service
 public class ServicioProductoImpl implements ServicioProducto {
 

@@ -4,10 +4,14 @@ import com.lyjstore.apilyjstore.model.ProductosPedidos;
 import com.lyjstore.apilyjstore.model.ProductosPedidosPK;
 import com.lyjstore.apilyjstore.repository.ProductoPedidoRepository;
 import com.lyjstore.apilyjstore.service.ServicioProductoPedido;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Data
 @Service
 public class ServicioProductoPedidoImpl implements ServicioProductoPedido {
 

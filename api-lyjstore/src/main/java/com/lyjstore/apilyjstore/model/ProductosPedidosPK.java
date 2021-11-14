@@ -1,10 +1,13 @@
 package com.lyjstore.apilyjstore.model;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 
+@Data
 @Embeddable
 public class ProductosPedidosPK implements Serializable {
 
@@ -22,19 +25,4 @@ public class ProductosPedidosPK implements Serializable {
         this.idPedido = idPedido;
     }
 
-    public Long getIdProducto() {
-        return idProducto;
-    }
-
-    public void setIdProducto(Long idProducto) {
-        this.idProducto = idProducto;
-    }
-
-    public Long getIdPedido() {
-        return idPedido;
-    }
-
-    public void setIdPedido(Long idPedido) {
-        this.idPedido = idPedido;
-    }
 }

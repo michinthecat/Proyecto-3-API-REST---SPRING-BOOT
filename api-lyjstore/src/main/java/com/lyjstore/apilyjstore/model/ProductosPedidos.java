@@ -1,11 +1,13 @@
 package com.lyjstore.apilyjstore.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name = "productos_pedidos")
 public class ProductosPedidos implements Serializable {
@@ -19,22 +21,6 @@ public class ProductosPedidos implements Serializable {
 
     @Column(name = "id_pedido",updatable = false,insertable = false)
     private Long idPedido;
-
-    public Long getIdProducto() {
-        return idProducto;
-    }
-
-    public void setIdProducto(Long idProducto) {
-        this.idProducto = idProducto;
-    }
-
-    public Long getIdPedido() {
-        return idPedido;
-    }
-
-    public void setIdPedido(Long idPedido) {
-        this.idPedido = idPedido;
-    }
 
     private short cantidad;
 
@@ -63,51 +49,4 @@ public class ProductosPedidos implements Serializable {
     public ProductosPedidos() {
     }
 
-    public ProductosPedidosPK getProductosPedidosPK() {
-        return this.productosPedidosPK;
-    }
-
-    public short getCantidad() {
-        return this.cantidad;
-    }
-
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
-    public LocalDate getFecha() {
-        return this.fecha;
-    }
-
-    public Producto getProducto() {
-        return this.producto;
-    }
-
-    public Pedido getPedido() {
-        return this.pedido;
-    }
-
-    public void setProductosPedidosPK(ProductosPedidosPK productosPedidosPK) {
-        this.productosPedidosPK = productosPedidosPK;
-    }
-
-    public void setCantidad(short cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
 }

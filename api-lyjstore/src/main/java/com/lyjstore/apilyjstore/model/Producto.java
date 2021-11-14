@@ -1,10 +1,13 @@
 package com.lyjstore.apilyjstore.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
+@Data
 @Entity
 @Table(name = "productos")
 public class Producto implements Serializable {
@@ -27,35 +30,4 @@ public class Producto implements Serializable {
     public Producto() {
     }
 
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public Double getPrecioVenta() {
-        return this.precioVenta;
-    }
-
-    public Long getUpc() {
-        return this.upc;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setPrecioVenta(Double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
-
-    public void setUpc(Long upc) {
-        this.upc = upc;
-    }
 }
