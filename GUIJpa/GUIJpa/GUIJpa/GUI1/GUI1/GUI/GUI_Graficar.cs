@@ -23,7 +23,7 @@ namespace GUI1.GUI
         private void GUI_Graficar_Load(object sender, EventArgs e)
         {
 
-            Object[] objectsito ;
+            List<Double[]> objectsito ;
 
             WebClient webClient = new WebClient();
             String respuesta = "";
@@ -36,11 +36,11 @@ namespace GUI1.GUI
 
             respuesta = webClient.DownloadString(uri);
 
-            objectsito = JsonConvert.DeserializeObject<Object[]>(respuesta);
+            objectsito = JsonConvert.DeserializeObject<List<Double[]>>(respuesta);
 
 
 
-            Object[] listaDetalle = objectsito;
+            List<Double[]> listaDetalle = objectsito;
 
 
 
@@ -54,9 +54,9 @@ namespace GUI1.GUI
 
             foreach (var pto in listaDetalle)
             {                
-                graficaMain = chartTortita.Series.Add(pto.ToString());
-                //graficaMain.Label = precio.ToString();
-                //graficaMain.Points.Add(Convert.ToInt32(precio));
+                graficaMain = chartTortita.Series.Add(pto[0].ToString());
+                graficaMain.Label = pto[1].ToString();
+                graficaMain.Points.Add(Convert.ToInt32(pto[0]));
             }
 
 

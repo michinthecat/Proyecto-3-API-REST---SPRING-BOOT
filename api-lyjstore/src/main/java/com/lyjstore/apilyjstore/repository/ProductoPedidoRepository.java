@@ -14,7 +14,7 @@ public interface ProductoPedidoRepository extends JpaRepository<ProductosPedidos
 
 
     @Query(value = "SELECT p.precio, COUNT(p) FROM productos_pedidos p GROUP BY p.precio",nativeQuery = true)
-    List<Object> listarPreciosAGraficar();
+    List<Double[]> listarPreciosAGraficar();
 
     List<ProductosPedidos> findAllByIdProducto(Long idProducto);
 }

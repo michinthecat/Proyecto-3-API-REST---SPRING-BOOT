@@ -80,7 +80,7 @@ public class ServicioProductoPedidoImpl implements ServicioProductoPedido {
     }
 
     @Override
-    public List<Object> listarPreciosAGraficar() {
+    public List<Double[]> listarPreciosAGraficar() {
         return productoPedidoRepository.listarPreciosAGraficar();
     }
 

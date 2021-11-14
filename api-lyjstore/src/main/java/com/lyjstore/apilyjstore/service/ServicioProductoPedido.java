@@ -19,6 +19,6 @@ public interface ServicioProductoPedido {
 
     List<ProductosPedidos> listarProductosPedidosPorIdProducto(Long idProducto);
 
-    List<Object> listarPreciosAGraficar();
+    List<Double[]> listarPreciosAGraficar();
 
 }
