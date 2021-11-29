@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{253A4F16-5FA4-4143-8221-C3794DEFCABA}|Default">
+  <MonoDevelop.Ide.ItemProperties.GUI1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GUI1/GUI/GUI_Main.cs">
+    <Files>
+      <File FileName="GUI1/GUI/GUI_Main.cs" Line="7" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GUI1" expanded="True">
+            <Node name="GUI1" expanded="True">
+              <Node name="GUI" expanded="True">
+                <Node name="GUI_Main.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
